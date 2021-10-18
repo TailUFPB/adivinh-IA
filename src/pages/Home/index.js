@@ -2,14 +2,30 @@ import * as S from "./styled";
 import { useState, useEffect } from "react";
 import TailLogo from "../../assets/logo-tail.png";
 
+import { db } from "../../firebase.config";
+import { collection, getDocs } from "firebase/firestore";
+
 export const Home = () => {
+  const objectsCollectionRef = collection(db, "objects");
+  const [objects, setObjects] = useState([]);
   const [counter, setCounter] = useState(30);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (counter > 0) {
       setTimeout(() => setCounter(counter - 1), 1000);
     }
   }, [counter]);
+
+  useEffect(() => {
+    const getObjects = async () => {
+      const data = await getDocs(objectsCollectionRef);
+      setObjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setLoading(false);
+    };
+
+    getObjects();
+  }, [objectsCollectionRef]);
 
   return (
     <S.Wrapper>
@@ -18,7 +34,7 @@ export const Home = () => {
       <S.Row>
         <div style={{ width: "160px", marginRight: "100px" }} />
         <S.ImageFrame>
-          <S.Image src="https://i.ibb.co/sWbh6wP/castle-by-van-gogh.png" />
+          {!loading && <S.Image src={objects[0].imgUrls[1]} />}
         </S.ImageFrame>
         <S.CounterContainer>
           <h1>{counter}</h1>

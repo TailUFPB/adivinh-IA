@@ -1,3 +1,10 @@
+# TO DO
+
+- [ ] Morphing das imagens
+- [ ] Mensagem de tempo esgotado 
+- [ ] Validar o palpite do usuário
+- [ ] Contabilizar a pontuação do usuário
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
