@@ -33,19 +33,13 @@ export const PageTitle = styled.h1`
   color: #ffffff;
 `;
 
-export const ImageFrame = styled.div`
+export const VideoFrame = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 490px;
   height: 490px;
   background: white;
-`;
-
-export const Image = styled.img`
-  width: 450px;
-  height: 450px;
-  object-fit: cover;
 `;
 
 export const CounterContainer = styled.div`
@@ -92,4 +86,19 @@ export const NextButton = styled.button`
   border-radius: 50%;
   background: #ffffff;
   background-image: url(${NextButtonLogo});
+`;
+
+export const ModalTitle = styled.h1`
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 12px;
+`;
+
+export const ModalParagraph = styled.p`
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 16px;
 `;
