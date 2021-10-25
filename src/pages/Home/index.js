@@ -1,26 +1,26 @@
-import * as S from "./styled";
 import Footer from '../../Footer/';
 import {Link} from "react-router-dom";
+import "./index.css"
 
 function Home() {
     return (
-        <>
-            <h1>
+        <div className="wrapper">
+            <h1 className = "title">
                 Adivinh-IA
             </h1>
             <Link to="/game">
-                <S.StartButton>
+               <div className="button-49">
                 JOGAR
-               </S.StartButton>
+               </div>
             </Link>
             <br/>
             <Link to="/about">
-            <S.StartButton>
+                <div className="button-49">
                 QUEM SOMOS
-               </S.StartButton>
+               </div>
             </Link>
             <Footer />
-        </>
+        </div>
     )
 }
 
