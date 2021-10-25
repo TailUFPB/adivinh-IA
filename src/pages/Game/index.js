@@ -1,6 +1,5 @@
 import * as S from "./styled";
 import { useState, useEffect } from "react";
-import TailLogo from "../../assets/logo-tail.png";
 
 import { db } from "../../firebase.config";
 import { collection, getDocs } from "firebase/firestore";
@@ -29,7 +28,6 @@ function Game() {
 
   return (
     <S.Wrapper>
-      <S.PageLogo src={TailLogo} />
       <S.PageTitle>Quais foram os inputs para o modelo?</S.PageTitle>
       <S.Row>
         <div style={{ width: "160px", marginRight: "100px" }} />

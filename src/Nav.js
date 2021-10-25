@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import { Link } from 'react-router-dom'
+import TailLogo from "./assets/logo-tail.png";
 
 function Nav() {
     const navStyle = {
@@ -9,7 +10,9 @@ function Nav() {
 
     return(
         <nav>
-            <h3>Logo</h3>
+            <Link to="/">
+            <img src={TailLogo} className = "logo" />
+            </Link>
             <ul className="nav-links">
                 <Link style={navStyle} to="/game">
                     <li>Game</li>

@@ -18,3 +18,15 @@ nav {
     align-items: center;
     list-style: none;
 }
+
+a:link{
+    text-decoration: none;
+}
+
+.logo{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 91.5px;
+    height: 88px;
+  }
