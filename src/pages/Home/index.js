@@ -15,8 +15,11 @@ function Home() {
             </Link>
             <br/>
             <Link to="/rules">
+                <div className="button-49">
                 REGRAS
+                </div>
             </Link>
+            <br/>
             <Link to="/about">
                 <div className="button-49">
                 QUEM SOMOS
