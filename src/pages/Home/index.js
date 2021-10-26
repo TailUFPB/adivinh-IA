@@ -14,9 +14,9 @@ function Home() {
                </S.StartButton>
             </Link>
             <br/>
-            <Link to="/about">
+            <Link to="/rules">
             <S.StartButton>
-                QUEM SOMOS
+                REGRAS
                </S.StartButton>
             </Link>
             <Footer />
