@@ -5,15 +5,17 @@ import "./index.css"
 function Home() {
     return (
         <div className="wrapper">
-            <h1 className = "title">
-                Adivinh-IA
-            </h1>
+            <Link to="/">
+                <h1 className = "title">
+                    Adivinh-IA
+                </h1>
+            </Link>
             <Link to="/game">
                <div className="button-49">
                 JOGAR
                </div>
             </Link>
-            <br/>
+            <br/>   
             <Link to="/rules">
                 <div className="button-49">
                 REGRAS
