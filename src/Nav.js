@@ -14,8 +14,14 @@ function Nav() {
             <img src={TailLogo} className = "logo" />
             </Link>
             <ul className="nav-links">
+                <Link style={navStyle} className="nav-link" to="/">
+                    <li>Home</li>
+                </Link>
                 <Link style={navStyle} className="nav-link" to="/game">
                     <li>Game</li>
+                </Link>
+                <Link style={navStyle} className="nav-link" to="/rules">
+                    <li>Regras</li>
                 </Link>
                 <Link style={navStyle} className="nav-link" to="/about">
                     <li>Quem Somos</li>

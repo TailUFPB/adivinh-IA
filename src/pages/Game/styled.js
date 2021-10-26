@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   min-width: 90vw;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(180deg, #a1d2d2 0%, #185a80 100%);
+  background: linear-gradient(180deg, #c1f7f7 0%, #185a80 100%);
 `;
 
 export const Row = styled.div`

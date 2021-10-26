@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cards from "./cards";
 
 function About() {
     return(
@@ -8,6 +9,7 @@ function About() {
                     Adivinh-IA
                 </h1>
             </Link>
+            <Cards/>
         </div>
     )
 }

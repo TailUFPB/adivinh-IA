@@ -34,9 +34,8 @@
     font-weight: 200;
     font-size: 7rem;
     font-family: 'astron boy', sans-serif;
-    
-    
   }
+
 .title:before {
     position: absolute;
     color: rgba(blue, 0.8);
