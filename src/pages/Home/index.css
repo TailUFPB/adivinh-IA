@@ -9,10 +9,15 @@
 }
 }
 
+@font-face {
+  font-family: 'astron boy';
+  src: url('./fonts/astronboy.ttf');
+  
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  
   width: 100vw;
   min-height: 90vh;
   min-width: 90vw;
@@ -21,16 +26,14 @@
 }
 
 .title {
-    border-bottom: 6px inset gray;
     text-shadow: rgb(75, 75, 75) 0 5px;
     color: white;
-    border-radius: 5%;
     padding: 1rem;
     position: relative;
     font-style: italic;
     font-weight: 200;
-    font-size: 6rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 7rem;
+    font-family: 'astron boy', sans-serif;
     
     
   }
