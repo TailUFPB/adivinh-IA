@@ -4,8 +4,8 @@ import NextButtonLogo from "../../assets/NextButton.png";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
+  min-width: 90vw;
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(180deg, #a1d2d2 0%, #185a80 100%);
@@ -75,6 +75,7 @@ export const GuessInput = styled.input`
   height: 65px;
   background: #ffffff;
   border-radius: 24px;
+  display:flex;
 
   font-size: 30px;
   line-height: 37px;
