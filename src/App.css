@@ -19,6 +19,21 @@ nav {
     list-style: none;
 }
 
+.nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+    height: 100%;
+  }
+  
+  .nav-link:hover {
+    border-bottom: 4px solid #fff;
+    transition: all 0.07s ease-out;
+  }
+
 a:link{
     text-decoration: none;
 }

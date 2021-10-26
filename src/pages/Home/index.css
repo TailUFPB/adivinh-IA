@@ -12,20 +12,26 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  
   width: 100vw;
   min-height: 90vh;
   min-width: 90vw;
   align-items: center;
-  background: linear-gradient(180deg, #a1d2d2 0%, #185a80 100%);
+  background: linear-gradient(180deg, #c1f7f7 0%, #185a80 100%);
 }
 
 .title {
- 
+    border-bottom: 6px inset gray;
+    text-shadow: rgb(75, 75, 75) 0 5px;
+    color: white;
+    border-radius: 5%;
+    padding: 1rem;
     position: relative;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-family: 'Catamaran', sans-serif;
-    color: rgba(white, 0.8);
+    font-style: italic;
+    font-weight: 200;
+    font-size: 6rem;
+    font-family: 'Roboto', sans-serif;
+    
     
   }
 .title:before {
