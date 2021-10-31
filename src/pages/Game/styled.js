@@ -4,11 +4,11 @@ import NextButtonLogo from "../../assets/NextButton.png";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
-  min-width: 90vw;
+  width: 100vw;
+  min-height: 100vh;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(180deg, #c1f7f7 0%, #185a80 100%);
+  background: linear-gradient(180deg, #a1d2d2 0%, #185a80 100%);
 `;
 
 export const Row = styled.div`
@@ -33,19 +33,13 @@ export const PageTitle = styled.h1`
   color: #ffffff;
 `;
 
-export const ImageFrame = styled.div`
+export const VideoFrame = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 490px;
   height: 490px;
   background: white;
-`;
-
-export const Image = styled.img`
-  width: 450px;
-  height: 450px;
-  object-fit: cover;
 `;
 
 export const CounterContainer = styled.div`
@@ -75,7 +69,6 @@ export const GuessInput = styled.input`
   height: 65px;
   background: #ffffff;
   border-radius: 24px;
-  display:flex;
 
   font-size: 30px;
   line-height: 37px;
@@ -93,4 +86,19 @@ export const NextButton = styled.button`
   border-radius: 50%;
   background: #ffffff;
   background-image: url(${NextButtonLogo});
+`;
+
+export const ModalTitle = styled.h1`
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 12px;
+`;
+
+export const ModalParagraph = styled.p`
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 16px;
 `;

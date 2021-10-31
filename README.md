@@ -1,7 +1,7 @@
 # TO DO
 
-- [ ] Morphing das imagens
-- [ ] Mensagem de tempo esgotado 
+- [x] Morphing das imagens
+- [x] Mensagem de tempo esgotado 
 - [ ] Validar o palpite do usuário
 - [ ] Contabilizar a pontuação do usuário
 
