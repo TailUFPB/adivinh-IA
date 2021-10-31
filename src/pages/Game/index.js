@@ -8,7 +8,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
 
-export const Home = () => {
+export const Game = () => {
   const objectsCollectionRef = collection(db, "objects");
   const [objects, setObjects] = useState([]);
   const [timerCounter, setTimerCounter] = useState(50);
