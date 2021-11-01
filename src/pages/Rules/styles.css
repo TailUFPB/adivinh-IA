@@ -1,0 +1,12 @@
+.title {
+    border-bottom: 6px inset gray;
+    text-shadow: rgb(75, 75, 75) 0 5px;
+    color: white;
+    border-radius: 5%;
+    padding: 1rem;
+    position: relative;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 6rem;
+    font-family: 'Roboto', sans-serif;  
+}

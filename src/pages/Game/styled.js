@@ -4,7 +4,6 @@ import NextButtonLogo from "../../assets/NextButton.png";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
   min-height: 100vh;
   justify-content: space-around;
   align-items: center;
@@ -15,14 +14,6 @@ export const Row = styled.div`
   display: flex;
   align-items: center;
   margin-top: 12px;
-`;
-
-export const PageLogo = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 183px;
-  height: 176px;
 `;
 
 export const PageTitle = styled.h1`

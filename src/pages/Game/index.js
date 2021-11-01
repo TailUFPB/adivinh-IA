@@ -1,20 +1,19 @@
 import * as S from "./styled";
 import ReactPlayer from "react-player";
 import { useState, useEffect } from "react";
-import TailLogo from "../../assets/logo-tail.png";
-
 import { db } from "../../firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
 
-export const Game = () => {
+function Game() {
   const objectsCollectionRef = collection(db, "objects");
   const [objects, setObjects] = useState([]);
   const [timerCounter, setTimerCounter] = useState(50);
   const [objectCounter, setObjectCounter] = useState(0);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [guessWord, setGuessWord] = useState("");
 
   useEffect(() => {
     if (timerCounter > 0) {
@@ -43,10 +42,19 @@ export const Game = () => {
     window.open(url);
   };
 
+  const validateGuess = () => {
+    if(guessWord){
+      if(objects[objectCounter].labels.includes(guessWord)){
+        console.log("acertou!")
+      }else{
+        console.log("errou!")
+      }
+    }
+  }
+
   return (
     <>
       <S.Wrapper>
-        <S.PageLogo src={TailLogo} />
         <S.PageTitle>Quais foram os inputs para o modelo?</S.PageTitle>
         <S.Row>
           <div style={{ width: "160px", marginRight: "100px" }} />
@@ -68,17 +76,20 @@ export const Game = () => {
         </S.Row>
         <S.Row>
           <div style={{ width: "65px", marginRight: "21px" }} />
-          <S.GuessInput placeholder="Insira um palpite..." />
-          <S.NextButton />
+          <S.GuessInput
+            required
+            placeholder="Insira um palpite..."
+            value={guessWord}
+            onInput={(e) => setGuessWord(e.target.value)}
+            disabled={loading}
+          />
+          <S.NextButton onClick={validateGuess} />
         </S.Row>
       </S.Wrapper>
       {showModal && (
         <Modal>
           <S.ModalTitle>Fim de jogo</S.ModalTitle>
-          <S.ModalParagraph>
-            Voce passou por todas as imagens parabens por favor acesso o site da
-            tail para mais informações
-          </S.ModalParagraph>
+          <S.ModalParagraph>Você passou por todos os vídeos!</S.ModalParagraph>
           <Button
             onClick={() => redirectTo("https://github.com/TailUFPB/adivinh-IA")}
           >
@@ -88,4 +99,6 @@ export const Game = () => {
       )}
     </>
   );
-};
+}
+
+export default Game;

@@ -1,7 +1,12 @@
-import { Game } from "./pages/Game";
+import React from 'react';
+import Routes from './Routes'
 
-const App = () => {
-  return <Game />;
-};
+function App() {
+  return (
+    <>
+      <Routes />
+    </>
+  );
+}
 
 export default App;
