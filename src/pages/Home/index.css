@@ -18,9 +18,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   min-height: 90vh;
-  min-width: 90vw;
   align-items: center;
   background: linear-gradient(180deg, #c1f7f7 0%, #185a80 100%);
 }
