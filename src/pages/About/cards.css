@@ -9,9 +9,7 @@
   
   .cards__container {
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column; 
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
@@ -20,10 +18,13 @@
   .cards__wrapper {
     position: relative;
     margin: 50px 0 25px;
+    
   }
   
   .cards__items {
-    margin-bottom: 24px;
+    margin-bottom: 2px ;
+    justify-content: space-between;
+    align-self: start;
   }
   
   .cards__item {
@@ -31,6 +32,7 @@
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
+    justify-content: center
   }
   
   .cards__item__link {
@@ -48,7 +50,6 @@
   .cards__item__pic-wrap {
     width: auto;
     height: 18rem;
-
   }
   
   .fade-img {
@@ -60,6 +61,7 @@
     content: attr(data-category);
     position: absolute;
     bottom: 0;
+    right: 0;
     padding: 6px 8px;
     font-size: 12px;
     font-weight: 700;
