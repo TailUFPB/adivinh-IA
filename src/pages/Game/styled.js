@@ -58,9 +58,8 @@ export const GuessInput = styled.input`
   outline: none;
   width: 537px;
   height: 65px;
-  background: #ffffff;
+  background-color: ${props => props.color || "#ffffff"};
   border-radius: 24px;
-
   font-size: 30px;
   line-height: 37px;
   text-align: center;

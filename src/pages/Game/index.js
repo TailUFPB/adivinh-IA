@@ -5,6 +5,7 @@ import { db } from "../../firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
+import { waitFor } from "@testing-library/dom";
 
 function Game() {
   const objectsCollectionRef = collection(db, "objects");
@@ -14,14 +15,18 @@ function Game() {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [guessWord, setGuessWord] = useState("");
+  const [color, setColor] = useState("white")
+  const [score, setScore] = useState(0.0)
+  const [skip, setSkip] = useState(false)
 
   useEffect(() => {
-    if (timerCounter > 0) {
+    if (timerCounter > 0 && !skip) {
       setTimeout(() => setTimerCounter(timerCounter - 1), 1000);
-    } else if (timerCounter === 0) {
+    } else if (timerCounter === 0 || skip) {
       if (objectCounter === objects.length - 1) {
         setShowModal(true);
       } else {
+        setSkip(false)
         setObjectCounter(objectCounter + 1);
         setTimerCounter(50);
       }
@@ -42,15 +47,26 @@ function Game() {
     window.open(url);
   };
 
+  
+
   const validateGuess = () => {
     if(guessWord){
       if(objects[objectCounter].labels.includes(guessWord)){
         console.log("acertou!")
+        setColor("green")
+        var score_ = -1/25*timerCounter^2 + 100 
+        setScore(score + score_)
+        setTimeout(() => setColor("white"), 600);
+        setTimeout(() => setSkip(true), 600);
       }else{
         console.log("errou!")
+        setColor("red")
+        setTimeout(() => setColor("white"), 600);
       }
     }
   }
+  
+
 
   return (
     <>
@@ -82,6 +98,7 @@ function Game() {
             value={guessWord}
             onInput={(e) => setGuessWord(e.target.value)}
             disabled={loading}
+            color = {color}
           />
           <S.NextButton onClick={validateGuess} />
         </S.Row>
@@ -94,6 +111,12 @@ function Game() {
             onClick={() => redirectTo("https://github.com/TailUFPB/adivinh-IA")}
           >
             Saiba mais!
+          </Button>
+          
+          <Button
+            onClick={() => redirectTo("/")}
+          >
+            Home Page
           </Button>
         </Modal>
       )}
