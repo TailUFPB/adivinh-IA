@@ -18,6 +18,8 @@ function Game() {
   const [color, setColor] = useState("white")
   const [score, setScore] = useState(0.0)
   const [skip, setSkip] = useState(false)
+  const [labelList, setLabelList] = useState([])
+  var stringSimilarity = require("string-similarity");
 
   useEffect(() => {
     if (timerCounter > 0 && !skip) {
@@ -38,9 +40,10 @@ function Game() {
       const data = await getDocs(objectsCollectionRef);
       setObjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       setLoading(false);
+      
     };
-
     getObjects();
+    
   }, [objectsCollectionRef]);
 
   const redirectTo = (url) => {
@@ -51,13 +54,18 @@ function Game() {
 
   const validateGuess = () => {
     if(guessWord){
-      if(objects[objectCounter].labels.includes(guessWord)){
-        console.log("acertou!")
-        setColor("green")
-        var score_ = -1/25*timerCounter^2 + 100 
-        setScore(score + score_)
+      console.log(objects[objectCounter].labels)
+      var possibleMatches = stringSimilarity.findBestMatch(guessWord.toLowerCase(), objects[objectCounter].labels.map((item)=>item.toLowerCase()));
+      var bestMatch = possibleMatches['bestMatch']
+      if(bestMatch['rating'] > 0.75){
+        console.log("acertou!");
+        setColor("green");
+        // var score_ = -1/25*timerCounter^2 + 100; 
+        setScore(score + 1);
         setTimeout(() => setColor("white"), 600);
+
         setTimeout(() => setSkip(true), 600);
+
       }else{
         console.log("errou!")
         setColor("red")
@@ -114,7 +122,8 @@ function Game() {
           </Button>
           
           <Button
-            onClick={() => redirectTo("/")}
+            onClick={(e) => {e.preventDefault();
+              window.location.href='/';}}
           >
             Home Page
           </Button>
