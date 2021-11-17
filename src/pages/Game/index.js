@@ -5,6 +5,7 @@ import { db } from "../../firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
+import { Link } from "react-router-dom";
 import { waitFor } from "@testing-library/dom";
 
 function Game() {
@@ -18,7 +19,9 @@ function Game() {
   const [color, setColor] = useState("white")
   const [score, setScore] = useState(0.0)
   const [skip, setSkip] = useState(false)
+  const [right, setRightChoices] = useState(0)
   const [labelList, setLabelList] = useState([])
+  
   var stringSimilarity = require("string-similarity");
 
   useEffect(() => {
@@ -59,12 +62,16 @@ function Game() {
       var bestMatch = possibleMatches['bestMatch']
       if(bestMatch['rating'] > 0.75){
         console.log("acertou!");
-        setColor("green");
-        // var score_ = -1/25*timerCounter^2 + 100; 
-        setScore(score + 1);
-        setTimeout(() => setColor("white"), 600);
 
+        setColor("green");
+        setRightChoices(right+1)
+        var score_ = -1/25*timerCounter^2 + 100; 
+        setScore(score + score_);
+        
+
+        setTimeout(() => setColor("white"), 600);
         setTimeout(() => setSkip(true), 600);
+        setTimeout(() => setGuessWord(""), 600);
 
       }else{
         console.log("errou!")
@@ -83,7 +90,7 @@ function Game() {
         <S.Row>
           <div style={{ width: "160px", marginRight: "100px" }} />
           <S.VideoFrame>
-            {!loading && (
+            {(!loading) && (
               <ReactPlayer
                 url={objects[objectCounter].videoUrl}
                 width="450px"
@@ -122,10 +129,11 @@ function Game() {
           </Button>
           
           <Button
-            onClick={(e) => {e.preventDefault();
-              window.location.href='/';}}
+            
           >
+            <Link style={{color:"white"}} to="/">
             Home Page
+            </Link>
           </Button>
         </Modal>
       )}
