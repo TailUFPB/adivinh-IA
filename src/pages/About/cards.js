@@ -8,6 +8,14 @@ function Cards() {
             <div className = "cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
+                        <CardItem
+                        src={require("../../assets/logo-tail.png").default}
+                        text='TAIL'
+                        label='Technology and Artificial Intelligence League'
+                        path='https://www.linkedin.com/company/tailufpb/'
+                        />
+                    </ul>
+                    <ul className="cards__items">
                         <CardItem 
                         src = {require("../../assets/jorge.jpg").default}
                         text = "Jorge Gomes"
