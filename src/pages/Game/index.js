@@ -8,7 +8,7 @@ import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 import { waitFor } from "@testing-library/dom";
 
-function Game() {
+ function Game() {
   const objectsCollectionRef = collection(db, "objects");
   const [objects, setObjects] = useState([]);
   const [timerCounter, setTimerCounter] = useState(50);
@@ -62,12 +62,10 @@ function Game() {
       var bestMatch = possibleMatches['bestMatch']
       if(bestMatch['rating'] > 0.75){
         console.log("acertou!");
-
         setColor("green");
         setRightChoices(right+1)
-        var score_ = -1/25*timerCounter^2 + 100; 
+        var score_ = 1/25*(50-timerCounter)**2-4*(50-timerCounter) + 100;
         setScore(score + score_);
-        
 
         setTimeout(() => setColor("white"), 600);
         setTimeout(() => setSkip(true), 600);
@@ -122,6 +120,7 @@ function Game() {
         <Modal>
           <S.ModalTitle>Fim de jogo</S.ModalTitle>
           <S.ModalParagraph>Você passou por todos os vídeos!</S.ModalParagraph>
+          <S.ModalParagraph>Score: {score}</S.ModalParagraph>
           <Button
             onClick={() => redirectTo("https://github.com/TailUFPB/adivinh-IA")}
           >
