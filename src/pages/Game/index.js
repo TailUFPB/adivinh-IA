@@ -79,6 +79,12 @@ import { waitFor } from "@testing-library/dom";
     }
   }
   
+  const handleKeyPress = (event) => {
+    // look for the `Enter` keyCode
+    if (event.keyCode === 13 || event.which === 13) {
+      validateGuess()
+    }
+  }
 
 
   return (
@@ -112,6 +118,7 @@ import { waitFor } from "@testing-library/dom";
             onInput={(e) => setGuessWord(e.target.value)}
             disabled={loading}
             color = {color}
+            onKeyPress={handleKeyPress}
           />
           <S.NextButton onClick={validateGuess} />
         </S.Row>
