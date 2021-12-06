@@ -11,20 +11,11 @@ function Rules() {
             </Link>
             <div className="container">
                 <div className="titleRule">Regras</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper vel justo eu lacinia. Curabitur gravida, lorem at consectetur ultricies, est eros tempor sapien, sed dignissim orci lacus eu metus. Aenean molestie augue at augue vehicula lacinia. Aliquam malesuada auctor elit vel feugiat. Nam nec augue sollicitudin, sodales mauris ac, semper diam. Aenean efficitur dignissim ipsum quis dapibus. Donec suscipit, mauris eget cursus finibus, neque justo finibus justo, non vehicula risus lectus ut enim. Donec sed justo euismod, vehicula massa non, posuere ante. Duis a scelerisque urna, ut ultrices enim. Donec erat dui, gravida sodales ultrices a, consectetur eu nulla. Duis imperdiet lobortis congue.</p>
-                <ol>
-                    <li>
-
-                    </li>
-                    <li>
-
-                    </li>
-                    <li>
-
-                    </li>
-                </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper vel justo eu lacinia. Curabitur gravida, lorem at consectetur ultricies, est eros tempor sapien, sed dignissim orci lacus eu metus. Aenean molestie augue at augue vehicula lacinia. Aliquam malesuada auctor elit vel feugiat. Nam nec augue sollicitudin, sodales mauris ac, semper diam. Aenean efficitur dignissim ipsum quis dapibus. Donec suscipit, mauris eget cursus finibus, neque justo finibus justo, non vehicula risus lectus ut enim. Donec sed justo euismod, vehicula massa non, posuere ante. Duis a scelerisque urna, ut ultrices enim. Donec erat dui, gravida sodales ultrices a, consectetur eu nulla. Duis imperdiet lobortis congue.</p>
-                
+                <p className="ruleP">
+                    O Adivinh-IA é um jogo de adivinhação em que os jogadores precisam usar de sua intuição para descobrir quais palavras geraram as imagens que vão aparecer na tela. Cada imagem é formada a partir de uma inteligência artificial que tenta construí-la a partir do uso de uma palavra, sendo essa a palavra que o usuário tem que adivinhar.
+                    </p>
+                <p className="ruleP">A cada 50 segundos o usuário vê uma nova imagem ser gerada e, a partir disso, ganha pontos dependendo do tempo em que acertar a palavra que gerou a imagem e, a rigor, as palavras estão em Português do Brasil. A resposta será aceita se apresentar leves erros, mas, caso esteja incorreta, 3 segundos são cortados do tempo do jogador.
+                </p>
             </div>
         </div>
     )

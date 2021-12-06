@@ -75,8 +75,10 @@ import { waitFor } from "@testing-library/dom";
         console.log("errou!")
         setColor("red")
         setTimeout(() => setColor("white"), 600);
+
       }
     }
+
   }
   
   const handleKeyPress = (event) => {
