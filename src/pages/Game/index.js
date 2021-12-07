@@ -20,12 +20,18 @@ import { waitFor } from "@testing-library/dom";
   const [score, setScore] = useState(0.0)
   const [skip, setSkip] = useState(false)
   const [right, setRightChoices] = useState(0)
+  const [wrongDebit, setDebit] = useState(false)
   const [labelList, setLabelList] = useState([])
   
   var stringSimilarity = require("string-similarity");
 
   useEffect(() => {
     if (timerCounter > 0 && !skip) {
+      if(wrongDebit){
+        setTimerCounter(timerCounter - 2)
+        setDebit(!wrongDebit)
+      }
+      else
       setTimeout(() => setTimerCounter(timerCounter - 1), 1000);
     } else if (timerCounter === 0 || skip) {
       if (objectCounter === objects.length - 1) {
@@ -73,9 +79,9 @@ import { waitFor } from "@testing-library/dom";
 
       }else{
         console.log("errou!")
-        setColor("red")
+        setColor("red") 
         setTimeout(() => setColor("white"), 600);
-
+        setDebit(!wrongDebit)
       }
     }
 
