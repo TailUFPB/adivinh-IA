@@ -27,12 +27,12 @@ import { waitFor } from "@testing-library/dom";
 
   useEffect(() => {
     if (timerCounter > 0 && !skip) {
-      if(wrongDebit){
+      if(wrongDebit && timerCounter>4){
         setTimerCounter(timerCounter - 2)
-        setDebit(!wrongDebit)
       }
       else
       setTimeout(() => setTimerCounter(timerCounter - 1), 1000);
+      setDebit(false)
     } else if (timerCounter === 0 || skip) {
       if (objectCounter === objects.length - 1) {
         setShowModal(true);
