@@ -1,77 +1,40 @@
-# TO DO
+[![](https://badges.aleen42.com/src/python.svg)](https://www.python.org/downloads/release/python-365/)
 
-- [x] Morphing das imagens
-- [x] Mensagem de tempo esgotado 
-- [ ] Validar o palpite do usuário
-- [ ] Contabilizar a pontuação do usuário
+[![](https://badges.aleen42.com/src/react.svg)](https://github.com/facebook/react)
 
-# Getting Started with Create React App
+# Adivinh-IA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivos
 
-## Available Scripts
+O grupo tinha como objeto de pesquisa as técnicas de Inteligência Artificial utilizadas na geração de imagens a partir de uma descrição em texto. 
 
-In the project directory, you can run:
+Com o objetivo de aplicar os conhecimentos adquiridos, a equipe desenvolveu um jogo web em que o usuário deverá adivinhar as palavras utilizadas pela IA para gerar a imagem artificialmente. A aplicação pode ser acessada pelo endereço: [https://adivinh-ia.herokuapp.com/](https://adivinh-ia.herokuapp.com/)
 
-### `yarn start`
+---
+## Tecnologias utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As imagens foram geradas utilizando os algoritmos de Machine Learning VQGAN e CLIP, combinados eles são capazes de gerar imagens a partir de uma descrição em texto. O VQGAN é um gerador de imagem e o CLIP é capaz de julgar a similaridade de uma imagem com uma descrição. O CLIP fornece feedback ao VQGAN sobre como tornar a imagem mais parecida com o input de texto, e a repetição desse processo torna possível a geração das imagens. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A aplicação foi construída utilizando as linguagens JavaScript, HTML e CSS em conjunto com a biblioteca React.
 
-### `yarn test`
+Após ter a interface finalizada e funcional localmente, foi realizado o deploy da aplicação via [Heroku](https://www.heroku.com/home). 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+## Equipe
 
-### `yarn build`
+<table width=100%>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/jorge-gomes-578205167/"><img style="border-radius: 50%;" src="src\assets\jorge.jpg" width="100px;" alt=""/><br /><sub><b>Jorge Gomes</b></sub></a><br /><a href="https://www.linkedin.com/in/jorge-gomes-578205167/" title=""></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/epitacio-neto-61ba98168/"><img style="border-radius: 50%;" src="src\assets\epitacio.jpg" width="100px;" alt=""/><br /><sub><b>Epitácio Neto</b></sub></a><br /><a href="https://www.linkedin.com/in/epitacio-neto-61ba98168/" title=""></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/yannngn/"><img style="border-radius: 50%;" src="src\assets\yann.jpg" width="100px;" alt=""/><br /><sub><b>Yann Nóbrega</b></sub></a><br /><a href="https://www.linkedin.com/in/yannngn/" title=""></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/candidoalfredocl/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69730206?v=4" width="100px;" alt=""/><br /><sub><b>Cândido Alfredo</b></sub></a><br /><a href="https://www.linkedin.com/in/candidoalfredocl/" title=""></a></td>
+  </tr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</table>
+<table  justify-self="center">
+  <tr>
+    <td width=5% align="center"><a href="https://www.linkedin.com/in/arthur-s-cavalcante-ferreira/"><img style="border-radius: 50%;" src="src\assets\arthur.jpg" width="100px;" alt=""/><br /><sub><b>Arthur Silva</b></sub></a><br /><a href="https://www.linkedin.com/in/arthur-s-cavalcante-ferreira/" title=""></a></td>
+    <td width=5% align="center"><a href="https://www.linkedin.com/in/danielcabralcosta/"><img style="border-radius: 50%;" src="src\assets\daniel.jpg" width="100px;" alt=""/><br /><sub><b>Daniel Cabral</b></sub></a><br /><a href="https://www.linkedin.com/in/danielcabralcosta/" title=""></a></td>
+    <td width=5% align="center"><a href="https://www.linkedin.com/in/humberto-escorel-154641127/"><img style="border-radius: 50%;" src="src\assets\humberto.jpg" width="100px;" alt=""/><br /><sub><b>Humberto Escorel</b></sub></a><br /><a href="https://www.linkedin.com/in/humberto-escorel-154641127/" title=""></a></td>
+  </tr> 
+</table>
